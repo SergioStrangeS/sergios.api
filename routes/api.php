@@ -15,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/country', [CountryController::class, 'index'] );
+Route::get('/country', [CountryController::class, 'index']);
 Route::post('/country', [CountryController::class, 'store']);
+Route::get('/country/{country}', [CountryController::class, 'show']);
+Route::patch('/country/{country}', [CountryController::class, 'update']);
+Route::delete('/country/{country}', [CountryController::class, 'destroy']);

@@ -16,4 +16,20 @@ class CountryController extends Controller
     {
         return Country::create($request->all());
     }
+
+    public function show(Country $country)
+    {
+        return $country;
+    }
+
+    public function update(Country $country, Request $request)
+    {
+        $country->update($request->all());
+    }
+
+    public function destroy(Country $country) {
+        $country->delete();
+
+        return "Пост удален!";
+    }
 }
